@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5sp"
+        android:text="Hello, Nice to meet you!"
+        android:layout_marginHorizontal="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/get_moving"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/get_moving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="9sp"
+        android:layout_marginBottom="30sp"
+        android:text="Get moving"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/number_card"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/number_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5sp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/terms_and_conditions"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        card_view:cardCornerRadius="18sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9sp"
+            android:orientation="horizontal"
+            android:padding="9sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="+254" />
+
+            <View
+                android:layout_width="1sp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10sp"
+                android:background="#696969" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your mobile Number"
+                android:inputType="phone" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/terms_and_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18sp"
+        android:gravity="center"
+        android:text="By creating an account you agree to our \nterms of Service and Privacy Policy"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
